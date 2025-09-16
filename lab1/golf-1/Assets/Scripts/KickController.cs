@@ -5,7 +5,7 @@ public class KickController : MonoBehaviour
 {
     [SerializeField] Slider Slider;
     private bool increase = true;
-    private float delta = 0.4f;
+    private float delta = 90f;
     public float Force { get { return Slider.value; } }
     void Start()
     {
@@ -23,7 +23,7 @@ public class KickController : MonoBehaviour
         {
             if (Slider.maxValue != Slider.value)
             {
-                Slider.value += delta;
+                Slider.value += delta * Time.deltaTime;
             }
             else
             {
@@ -34,7 +34,7 @@ public class KickController : MonoBehaviour
         {
             if (Slider.minValue != Slider.value)
             {
-                Slider.value -= delta;
+                Slider.value -= delta * Time.deltaTime;
             }
             else { increase = true; }
         }

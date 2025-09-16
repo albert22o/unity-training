@@ -91,16 +91,6 @@ public class Arrow : MonoBehaviour
         }
     }
 
-    // Визуализация в редакторе
-    void OnDrawGizmosSelected()
-    {
-        if (sphere != null)
-        {
-            Gizmos.color = Color.yellow;
-            Gizmos.DrawLine(sphere.position, transform.position);
-        }
-    }
-
     internal void Set_active(bool v)
     {
         if (arrowRenderer != null)

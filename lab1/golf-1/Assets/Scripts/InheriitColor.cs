@@ -26,6 +26,7 @@ public class InheritParentColor : MonoBehaviour
         if (parentRenderer != null && myRenderer.material != null)
         {
             myRenderer.material.color = parentRenderer.material.color;
+            myRenderer.enabled = parentRenderer.enabled;
         }
     }
 }

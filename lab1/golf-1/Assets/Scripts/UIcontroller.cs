@@ -3,16 +3,18 @@ using UnityEngine.UI;
 
 public class UIcontroller : MonoBehaviour
 {
-    [SerializeField] private GameObject uiPanel; // Перетащите ваш UI элемент в Inspector
-
+    [SerializeField] private GameObject uiPanel;
+    [SerializeField] private PauseManager pauseManager;
     private void OnTriggerEnter(Collider other)
     {
        uiPanel.SetActive(true);
+       pauseManager.PauseGame();
     }
     // Скрыть UI элемент
     public void HideUI()
     {
         uiPanel.SetActive(false);
+        pauseManager.ResumeGame();
     }
 
     // Показать UI элемент

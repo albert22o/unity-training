@@ -13,12 +13,4 @@ public class SceneReloader : MonoBehaviour
         SceneManager.LoadScene(currentSceneIndex);
     }
 
-    // ѕерезагрузка по нажатию клавиши (дл€ тестировани€)
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            ReloadCurrentScene();
-        }
-    }
 }
